@@ -1,0 +1,25 @@
+def find_factors(num):
+    factors = []
+    for i in range(1, num + 1):
+        if num % i == 0:
+            factors.append(i)
+    return factors
+
+def main():
+    given_number = 100
+    
+    factors = find_factors(given_number)
+    num_factors = len(factors)
+    
+    print(f"Number of factors of {given_number}: {num_factors}")
+    print("Factors:", factors)
+    
+    # Ask for nth factor
+    n = int(input(f"Enter the position of the factor to retrieve (1 to {num_factors}): "))
+    if 1 <= n <= num_factors:
+        print(f"The {n}th factor of {given_number} is: {factors[n-1]}")
+    else:
+        print(f"Invalid position. Please enter a number between 1 and {num_factors}.")
+
+if __name__ == "__main__":
+    main()
