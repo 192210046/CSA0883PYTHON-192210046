@@ -1,0 +1,23 @@
+def linear_search(lst, target):
+    
+    for index, element in enumerate(lst):
+     
+        if element == target:
+            return index 
+    return -1 
+
+def main():
+   
+    lst = [2, 4, 6, 8, 9, 7 , 9]
+    target = int(input("Enter the target element to search for: "))
+    
+    
+    result = linear_search(lst, target)
+    
+    if result != -1:
+        print(f"Element {target} found at index {result}.")
+    else:
+        print(f"Element {target} not found in the list.")
+
+if __name__ == "__main__":
+    main()
