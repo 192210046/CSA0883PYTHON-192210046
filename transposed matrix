@@ -1,0 +1,32 @@
+def transpose_matrix(matrix):
+    
+    rows = len(matrix)
+    cols = len(matrix[0])
+
+    transposed_matrix = [[0] * rows for _ in range(cols)]
+
+    for i in range(rows):
+        for j in range(cols):
+            transposed_matrix[j][i] = matrix[i][j]
+
+    return transposed_matrix
+
+def main():
+    matrix = [
+        [4, 6, 7, 8],
+        [3, 7, 2, 7],
+        [7, 3, 7, 5]
+    ]
+
+    print("Original Matrix:")
+    for row in matrix:
+        print(row)
+
+    transposed_matrix = transpose_matrix(matrix)
+
+    print("\nTransposed Matrix:")
+    for row in transposed_matrix:
+        print(row)
+
+if __name__ == "__main__":
+    main()
