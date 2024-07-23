@@ -1,0 +1,23 @@
+def binary_to_decimal(binary_str):
+    return int(binary_str, 2)
+
+def find_maximum_binary(bin_list):
+    max_value = bin_list[0]
+    
+    for bin_num in bin_list:
+        if binary_to_decimal(bin_num) > binary_to_decimal(max_value):
+            max_value = bin_num
+            
+    return max_value
+
+def main():
+ 
+    bin_list = ["1101", "1011", "1001"]
+    
+
+    max_binary = find_maximum_binary(bin_list)
+    
+    print(f"The maximum binary value is: {max_binary}")
+
+if __name__ == "__main__":
+    main()
